@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MentaVlionSDK"
-  spec.version      = "0.0.2"
+  spec.version      = "1.0.0"
   spec.summary      = "MentaVlionSDK 基础库"
 
   spec.description  = <<-DESC
@@ -28,17 +28,17 @@ Pod::Spec.new do |spec|
   spec.license      = "MIT"
   spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   spec.author             = { "shicymenta" => "shicy@mentamob.com" }
-  spec.platform     = :ios, "12.0" 
-  spec.ios.deployment_target = '12.0'
+  spec.platform     = :ios, "9.0" 
+  spec.ios.deployment_target = '9.0'
 
   spec.source       = { :git => "https://github.com/shicymenta/MentaVlionSDK.git", :tag => "#{spec.version}" }  #
 
-  spec.dependency  'MentaVlionBaseSDK', '0.0.4'
+  spec.dependency  'MentaVlionBaseSDK', '0.0.5'
   spec.frameworks = 'UIKit', 'MapKit', 'WebKit', 'MediaPlayer', 'CoreLocation', 'AdSupport', 'CoreMedia', 'AVFoundation', 'CoreTelephony', 'StoreKit', 'SystemConfiguration', 'MobileCoreServices', 'CoreMotion', 'Accelerate','AudioToolbox','JavaScriptCore','Security','CoreImage','AudioToolbox','ImageIO','QuartzCore','CoreGraphics','CoreText'
   spec.libraries = 'c++', 'resolv', 'z', 'sqlite3', 'bz2', 'xml2', 'iconv', 'c++abi'
   spec.vendored_frameworks     = 'Classes/Classes/MVlionSDK.framework'
   # spec.resource_bundles = { 'MVlionSDK' => ['Classes/Resources/**/*'] }
-  spec.resource_bundles = { 'MVlionSDK' => ['Classes/Resources/**/*'] }
+  spec.resource_bundles = { 'MVlionSDK' => ['Classes/Resources/*.bundle'] }
 
 
 end
