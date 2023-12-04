@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MentaVlionSDK"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "MentaVlionSDK 基础库"
 
   spec.description  = <<-DESC
@@ -38,7 +38,7 @@ Pod::Spec.new do |spec|
   spec.libraries = 'c++', 'resolv', 'z', 'sqlite3', 'bz2', 'xml2', 'iconv', 'c++abi'
   spec.vendored_frameworks     = 'Classes/Classes/MVlionSDK.framework'
   # spec.resource_bundles = { 'MVlionSDK' => ['Classes/Resources/**/*'] }
-  spec.resource_bundles = { 'MVlionSDK' => ['Classes/Resources/*.bundle'] }
+  spec.resource_bundles = { 'MVlionSDK' => ['Classes/Resources/**/*'] }
 
 
 end
