@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@class MVlionUser, MVLionLocation;
+@class MVlionUser, MVlionLocation;
 @interface MVlionSDKManager : NSObject
 
 /**
@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param location 传入的地理位置
  * @discussion 当isCanUseLocation = NO时，可传入地理位置信息， SDK 使用您传入的地理位置信息，可选
  */
-+ (void)setUserLocation:(MVLionLocation *)location;
++ (void)setUserLocation:(MVlionLocation *)location;
 
 /**
  * @brief 设置用户信息

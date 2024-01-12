@@ -1,5 +1,5 @@
 //
-//  MVLionLocation.h
+//  MVlionLocation.h
 //  MentaVlionSDK
 //
 //  Created by iMacMe on 2023/11/16.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MVLionLocation : NSObject
+@interface MVlionLocation : NSObject
 
 /// 经度
 @property (nonatomic, copy) NSString *longitude;

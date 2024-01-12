@@ -10,7 +10,16 @@
 #import <MVlionSDK/MVlionSDKManager.h>
 #import <MVlionSDK/MVlionSlotConfig.h>
 #import <MVlionSDK/MVlionUser.h>
-#import <MVlionSDK/MVLionLocation.h>
-#import <MVlionSDK/MVLionSplashAd.h>
+#import <MVlionSDK/MVlionLocation.h>
+#import <MVlionSDK/MVlionSplashAd.h>
+#import <MVlionSDK/MVlionSplashSlotConfig.h>
 #import <MVlionSDK/MVlionEnum.h>
+
+
+
+#import <MVlionSDK/MVlionNativeAd.h>
+#import <MVlionSDK/MVlionNativeAdDataObject.h>
+#import <MVlionSDK/MVlionNativeAdView.h>
+#import <MVlionSDK/MVlionNativeSlotConfig.h>
+
 #endif /* MVlionSDK_h */
