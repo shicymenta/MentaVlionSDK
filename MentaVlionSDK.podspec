@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MentaVlionSDK"
-  spec.version      = "5.10.10"
+  spec.version      = "5.20.07"
   spec.summary      = "MentaVlionSDK 基础库"
 
   spec.description  = <<-DESC
@@ -33,7 +33,7 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/shicymenta/MentaVlionSDK.git", :tag => "#{spec.version}" }  #
 
-  spec.dependency  'MentaVlionBaseSDK', '0.0.6'
+  spec.dependency  'MentaVlionBaseSDK', '0.0.7'
   spec.frameworks = 'UIKit', 'MapKit', 'WebKit', 'MediaPlayer', 'CoreLocation', 'AdSupport', 'CoreMedia', 'AVFoundation', 'CoreTelephony', 'StoreKit', 'SystemConfiguration', 'MobileCoreServices', 'CoreMotion', 'Accelerate','AudioToolbox','JavaScriptCore','Security','CoreImage','AudioToolbox','ImageIO','QuartzCore','CoreGraphics','CoreText'
   spec.libraries = 'c++', 'resolv', 'z', 'sqlite3', 'bz2', 'xml2', 'iconv', 'c++abi'
   spec.vendored_frameworks     = 'Classes/Classes/MVlionSDK.framework'
