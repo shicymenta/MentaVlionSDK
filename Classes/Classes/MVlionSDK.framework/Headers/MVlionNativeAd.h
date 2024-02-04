@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 广告id 只读，开发者不允许修改
 @property(nonatomic, copy, readonly) NSString *slotId;
 
+/// 内部自用不必理会
+@property (nonatomic, strong, readonly) NSMutableDictionary *extra;
 
 /// 初始化方法
 /// - Parameter config: 初始化配置

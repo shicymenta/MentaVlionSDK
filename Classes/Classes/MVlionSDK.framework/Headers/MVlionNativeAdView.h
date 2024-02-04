@@ -6,14 +6,23 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <MentaVlionBaseSDK/MentaVlionCommonEnum.h>
 NS_ASSUME_NONNULL_BEGIN
 @class MVlionNativeAdView, MVlionNativeAdDataObject;
 @protocol MVlionNativeAdViewDelegate <NSObject>
 
 @optional
+
+
 /**
  广告曝光回调,
+ @param nativeAdView 可能多次触发
+ */
+
+- (void)mvlion_nativeAdViewWillVisible:(MVlionNativeAdView *)nativeAdView;
+
+/**
+ 广告曝光回调(只触发一次)
  @param nativeAdView MVlionNativeAdView 实例,
  */
 - (void)mvlion_nativeAdViewWillExpose:(MVlionNativeAdView *)nativeAdView;
@@ -24,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param nativeAdView MVlionNativeAdView 实例,
  */
-- (void)mvlion_nativeAdViewDidClick:(MVlionNativeAdView *)nativeAdView;
+- (void)mvlion_nativeAdViewDidClick:(MVlionNativeAdView *)nativeAdView extra:(NSDictionary *)extra;
 
 /**
  广告点击关闭回调 UI的移除和数据的解绑 需要在该回调中进行
@@ -50,6 +59,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)mvlion_nativeAdDetailViewClosed:(MVlionNativeAdView *)nativeAdView;
 
 
+// 插屏广告点击后的跳转模式
+- (void)mvlion_nativeAd:(MVlionNativeAdView *)nativeAdView jumpTargetMode:(MentaJumpTargetMode)mode link:(NSString *)link;
 
 
 @end

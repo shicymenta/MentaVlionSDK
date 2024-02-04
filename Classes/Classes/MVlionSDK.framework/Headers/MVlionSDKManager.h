@@ -81,6 +81,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)setCustomIDFA:(NSString *)idfa;
 
 
+/**
+ * @brief 是否使用聚合SDK(MentaUnifiedSDK)管理MentaVlionSDK
+ * @param isAggregation 默认 YES
+ * @discussion 如果果您没有集成MentaUnifiedSDK 只是单独的集成了MVlionSDK 请务必将该属性置为NO 否则一些属性不生效
+ */
++ (void)setUseAggregation:(BOOL)isAggregation;
 
 @end
 

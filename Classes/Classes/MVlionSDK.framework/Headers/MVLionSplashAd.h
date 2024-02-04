@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)mvlion_splashAd:(MVlionSplashAd *)splashAd didFailWithError:(NSError * _Nullable)error;
 
 /// 开屏广告被点击了
-- (void)mvlion_splashAdDidClick:(MVlionSplashAd *)splashAd;
+- (void)mvlion_splashAdDidClick:(MVlionSplashAd *)splashAd extra:(NSDictionary *)extra;
 
 /// 开屏广告关闭了
 - (void)mvlion_splashAdDidClose:(MVlionSplashAd *)splashAd closeMode:(MentaSplashAdCloseMode)mode;
@@ -37,6 +37,10 @@ NS_ASSUME_NONNULL_BEGIN
 ///  开屏广告曝光
 - (void)mvlion_splashAdDidExpose:(MVlionSplashAd *)splashAd;
 
+///  开屏广告点击后的跳转模式
+- (void)mvlion_splashAd:(MVlionSplashAd *)splashAd jumpTargetMode:(MentaJumpTargetMode)mode link:(NSString *)link;
+
+
 @end
 
 @interface MVlionSplashAd : NSObject
@@ -45,10 +49,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,weak)id <MVlionSplashAdDelegate> delegate;
 
 /// 广告id 只读，开发者不允许修改
-@property(nonatomic, copy, readonly) NSString *slotId;
+@property (nonatomic, copy, readonly) NSString *slotId;
 
 /// 当前广告的价格 在 -mvlion_splashAdDidLoad回调之后才能正确获取
 @property (nonatomic, assign, readonly) NSInteger price;
+
+/// 内部自用不必理会
+@property (nonatomic, strong, readonly) NSMutableDictionary *extra;
+
 
 
 /// 初始化方法
