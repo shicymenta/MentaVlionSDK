@@ -88,6 +88,17 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)setUseAggregation:(BOOL)isAggregation;
 
+/**
+ * @brief 设置CAID
+ * @param caid 传入idfa值，可选配置 SDK内部不会获取caid
+ * @discussion 虽然设置caid 有助于提升变现收益, 但还是先建议先全面了解caid,再选择是否接入
+ */
++ (void)setCAID:(NSString *)caid;
+/**
+ * @brief 设置CAID version
+ */
++ (void)setCAIDVersion:(NSString *)caidVersion;
+
 @end
 
 NS_ASSUME_NONNULL_END
