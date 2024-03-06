@@ -89,15 +89,16 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)setUseAggregation:(BOOL)isAggregation;
 
 /**
- * @brief 设置CAID
- * @param caid 传入idfa值，可选配置 SDK内部不会获取caid
+ * @brief Pollux 值，原CAID 值
+ * @param polluxValue 传入caid值，可选配置 SDK内部不会获取caid
  * @discussion 虽然设置caid 有助于提升变现收益, 但还是先建议先全面了解caid,再选择是否接入
  */
-+ (void)setCAID:(NSString *)caid;
++ (void)setPolluxValue:(NSString *)polluxValue;
+
 /**
- * @brief 设置CAID version
+ * @brief 算法版本，原CAID 算法版本
  */
-+ (void)setCAIDVersion:(NSString *)caidVersion;
++ (void)setPolluxVersion:(NSString *)polluxVersion;
 
 @end
 
