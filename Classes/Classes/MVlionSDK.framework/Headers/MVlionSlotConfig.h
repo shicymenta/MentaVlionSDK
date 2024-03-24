@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @property (nonatomic, copy) NSString *adx_tagid;// 聚合广告位id 用于统计时的填充的参数
+@property (nonatomic, copy) NSString *trace_id;// 聚合广告位每次请求生成的trace_id 用于统计时的填充的参数
 
 #pragma mark 开发者不必理会该字段, 勿传
 @property (nonatomic, strong) NSDictionary *adTemplate __deprecated_msg("adTemplate 已过期废弃"); // 模版信息

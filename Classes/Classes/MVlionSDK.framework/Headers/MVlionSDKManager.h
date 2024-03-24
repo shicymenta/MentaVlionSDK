@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@class MVlionUser, MVlionLocation;
+@class MVlionUser, MULocation;
 @interface MVlionSDKManager : NSObject
 
 /**
@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param location 传入的地理位置
  * @discussion 当isCanUseLocation = NO时，可传入地理位置信息， SDK 使用您传入的地理位置信息，可选
  */
-+ (void)setUserLocation:(MVlionLocation *)location;
++ (void)setUserLocation:(MULocation *)location;
 
 /**
  * @brief 设置用户信息
@@ -99,6 +99,24 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief 算法版本，原CAID 算法版本
  */
 + (void)setPolluxVersion:(NSString *)polluxVersion;
+
+
+/**
+ * @brief carrier 是否允许获取手机运营商 开关
+ * @param isCanUseCarrier 是否允许 SDK内部获取carrier
+ * @discussion 是否允许使用carrier， 默认为NO；设置为NO时，SDK则不获取carrier，可通过setCustomCarrier传入有效的carrier值
+ */
++ (void)canUseCarrier:(BOOL)isCanUseCarrier;
+
+/**
+ * @brief 设置carrier值
+ * @param carrier 传入carrier值，可选配置 SDK内部不再获取carrier
+ * @discussion 可通过该方法传入您的carrier值, isCanUseCarrier = YES 时 该设置无效
+ *             注意: 请传入 unknown, mobile, telecom, unicom 之中的某个值
+ *             unknown: 未知, mobile: 移动, telecom: 电信, unicom: 联通
+ *
+ */
++ (void)setCustomCarrier:(NSString *)carrier;
 
 @end
 

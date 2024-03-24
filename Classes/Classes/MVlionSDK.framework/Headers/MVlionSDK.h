@@ -11,7 +11,6 @@
 #import <MVlionSDK/MVlionSlotConfig.h>
 #import <MVlionSDK/MVlionUser.h>
 
-#import <MVlionSDK/MVLionLocation.h>
 #import <MVlionSDK/MVLionSplashAd.h>
 #import <MVlionSDK/MVlionSplashSlotConfig.h>
 #import <MVlionSDK/MVlionEnum.h>
@@ -22,7 +21,7 @@
 #import <MVlionSDK/MVlionInterstitialAd.h>
 #import <MVlionSDK/MVlionInterstitialConfig.h>
 
-#import <MVlionSDK/MVlionLocation.h>
+
 #import <MVlionSDK/MVlionSplashAd.h>
 #import <MVlionSDK/MVlionSplashSlotConfig.h>
 #import <MVlionSDK/MVlionEnum.h>
@@ -38,5 +37,10 @@
 #import <MVlionSDK/MVlionNativeExpressAd.h>
 #import <MVlionSDK/MVlionNativeExpressSlotConfig.h>
 #import <MVlionSDK/MVlionNativeExpressAdView.h>
+
+#import <MVlionSDK/MVlionBannerSlotConfig.h>
+#import <MVlionSDK/MVlionBannerAdView.h>
+#import <MVlionSDK/MVlionBannerAd.h>
+
 
 #endif /* MVlionSDK_h */
